@@ -35,12 +35,12 @@ var s;
         } catch (error) {
             if ("content" in entry) s = entry.content.$t; else s="";
             if (thumbUrl == "" && mediaThumbsOnly == false) {
-                 regex = /http\:\/\/www\.youtube(-nocookie){0,1}\.com\/(v){0,1}(embed){0,1}\/(([^"&?' ]*))/;
+                 regex = /https\:\/\/www\.youtube(-nocookie){0,1}\.com\/(v){0,1}(embed){0,1}\/(([^"&?' ]*))/;
                 videoIds = s.match(regex);
                 if (videoIds != null) {
                     videoId = videoIds[4];
                 }
-                if (videoIds != null && videoId != null) thumbUrl = "http://img.youtube.com/vi/" + videoId + "/2.jpg"
+                if (videoIds != null && videoId != null) thumbUrl = "https://img.youtube.com/vi/" + videoId + "/2.jpg"
             }
             if (thumbUrl == "" && mediaThumbsOnly == false) {
                 a = s.indexOf("<img");
@@ -56,7 +56,7 @@ var s;
         thumbUrl= thumbUrl.replace("_b.jpg","_s.jpg");thumbUrl= thumbUrl.replace("_m.jpg","_s.jpg");}
         if (thumbUrl == "" && showNoImage == true) 
         {
-        thumbUrl = "http://2.bp.blogspot.com/-erTXCq61ULM/TmHYAQBZ0GI/AAAAAAAACCs/6cBX54Dn6Gs/s72-c/default.png";
+        thumbUrl = "https://2.bp.blogspot.com/-erTXCq61ULM/TmHYAQBZ0GI/AAAAAAAACCs/6cBX54Dn6Gs/s72-c/default.png";
         try{if(defaultImage!="") thumbUrl=defaultImage;}catch(error){}
         thumbUrl = thumbUrl.replace("/s72-c/","/s"+imgDim+"-c/");
         }
@@ -192,7 +192,7 @@ myDiv = createDiv("bp_clear_float");
 myDiv.style.clear=imgFloat;
 main.appendChild(myDiv);
 }
-document.getElementById("bp_recent_link").style.backgroundImage="url('http://3.bp.blogspot.com/-H8WPIh3wjr4/TmHnuo9tnnI/AAAAAAAACDE/_yuVqfb1HAk/blogger-widgets.png')";
+document.getElementById("bp_recent_link").style.backgroundImage="url('https://3.bp.blogspot.com/-H8WPIh3wjr4/TmHnuo9tnnI/AAAAAAAACDE/_yuVqfb1HAk/blogger-widgets.png')";
 document.getElementById("bp_recent_link").style.backgroundRepeat="no-repeat";
 try{
 if(myMargin!=0 && imgFloat=="left" && flag==0) document.getElementById("bp_recent_link").style.marginLeft = myMargin+"px";
